@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h3 class="d-flex justify-content-between mb-5">
+    <span>Numero de turnos de hoy: <%= @count %></span>
+    <%= link_to "Reprogramar turnos no atendidos", reprogramar_turnos_appointments_path, class: 'btn btn-success' %>
+  </h3>
+  <h4 class="mb-5">Zona: <%= @vacunatorio.zone.capitalize %></h4>
+  
+  <%= render 'filter' %>
+  
+  <table class="table table-bordered border-success card-shadow mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Paciente</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Vacuna</th>
+        <th scope="col">Dosis</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= render partial: 'appointment_data', collection: @appointments, as: :appointment %>
+    </tbody>
+  </table>
+  <div class="digg_pagination d-flex justify-content-center mb-5 mt-4">
+    <%= will_paginate @appointments, previous_label: 'Anterior', next_label: 'Siguiente' %>
+  </div>
+</div>

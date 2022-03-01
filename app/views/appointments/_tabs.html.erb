@@ -1,0 +1,19 @@
+<div class="container mt-5">
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<%= link_header('Todos los turnos', appointments_path)%>
+		</li>
+		<li class="nav-item">
+			<%= link_header('Pendientes', appointments_path(status: :pending))%>
+		</li>
+		<li class="nav-item">
+			<%= link_header('Confirmados', appointments_path(status: :confirmed))%>
+		</li>
+		<li class="nav-item">
+			<%= link_header('Turnos pasados', appointments_path(status: :past))%>
+		</li>
+		<li class="nav-item">
+			<%= link_header('Turnos cancelados', appointments_path(status: :canceled))%>
+		</li>
+	</ul>
+</div>

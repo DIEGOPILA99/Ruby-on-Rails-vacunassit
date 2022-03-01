@@ -1,0 +1,17 @@
+<div class="center-things">
+  <div class="py-5 form-container" id='formContent'>
+    <h2>¿Olvidaste tu clave de vacunación?</h2>
+
+    <%= form_for @user_patient, url: mandame_aquella_path, method: :post do |f| %>
+
+      <div class="field text-start mt-3">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control mt-2' %>
+      </div>
+
+      <div class="actions mt-4">
+        <%= f.submit "Enviar clave de vacunación", class:'btn btn-success'%>
+      </div>
+    <% end %>
+  </div>
+</div>

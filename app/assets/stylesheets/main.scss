@@ -1,0 +1,45 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.navbar .navbar-brand img {
+  height: 50px;
+}
+
+.card-shadow {
+  box-shadow: 0px 3px 9px #00000029;
+}
+
+.fas, .far {
+  margin-right: .25rem;
+}
+
+.selected_tab {
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 0.2rem solid green;
+}
+
+textarea {
+  height: 200px;
+}
+
+
+//sort
+.sort {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.sort-desc {
+  border-top: 8px solid #198754;
+}
+
+.sort-asc {
+  border-bottom: 8px solid #198754;
+}
